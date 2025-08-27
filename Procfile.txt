@@ -1,2 +1,0 @@
-web: gunicorn football_news.wsgi
-
