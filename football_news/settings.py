@@ -31,7 +31,7 @@ load_dotenv()
 DEBUG = True
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 ALLOWED_HOSTS = ["localhost", "127.0.0.1","philo-pradipta41-footballnews.pbp.cs.ui.ac.id"]
-
+CSRF_TRUSTED_ORIGINS = ["https://philo-pradipta41-footballnews.pbp.cs.ui.ac.id"]
 
 # Application definition
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
